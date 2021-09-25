@@ -484,22 +484,33 @@ SettingsWindowLayout::SettingsWindowLayout(uint32 const p_targetWidth, uint32 co
     }
 }
 
-float SettingsWindow::GetMasterAudioLevel()
+SettingsState SettingsWindow::GetState() const
+{
+    return m_state;
+}
+
+void SettingsWindow::LoadState(SettingsState p_state)
+{
+    UpdateState(p_state);
+    UpdateFields();
+}
+
+float SettingsWindow::GetMasterAudioLevel() const
 {
     return m_state.m_masterVolumePercentage;
 }
 
-float SettingsWindow::GetMusicAudioLevel()
+float SettingsWindow::GetMusicAudioLevel() const
 {
     return m_state.m_musicVolumePercentage;
 }
 
-float SettingsWindow::GetFXAudioLevel()
+float SettingsWindow::GetFXAudioLevel() const
 {
     return m_state.m_fxVolumePercentage;
 }
 
-UIntPair SettingsWindow::GetResolution()
+UIntPair SettingsWindow::GetResolution() const
 {
     return *m_state.m_resolution;
 }

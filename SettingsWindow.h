@@ -3,7 +3,7 @@
 #include <vector>
 #include <string>
 
-#include "Types.h"
+#include "RaySettingsTypes.h"
 
 namespace raysettings
 {
@@ -119,10 +119,13 @@ public:
     void Update();
     void Show(bool p_shouldShow);
 
-    float GetMasterAudioLevel();
-    float GetMusicAudioLevel();
-    float GetFXAudioLevel();
-    UIntPair GetResolution();
+    SettingsState GetState() const;
+    void LoadState(SettingsState p_state);
+
+    float GetMasterAudioLevel() const;
+    float GetMusicAudioLevel() const;
+    float GetFXAudioLevel() const;
+    UIntPair GetResolution() const;
 
 private:
 
