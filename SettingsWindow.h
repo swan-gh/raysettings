@@ -75,7 +75,7 @@ struct SettingsWindowLayout
     Rectangle m_layoutRecs[19] = {
         Rectangle{ m_anchor01.x + 0, m_anchor01.y + 0, 1820, 350 },
         Rectangle{ m_anchor02.x + 0, m_anchor02.y + 0, 675, 250 },
-        Rectangle{ 225, 150, 525, 25 },
+        Rectangle{ m_anchor02.x + 125, m_anchor02.y + 25, 525, 25 },
         Rectangle{ m_anchor02.x + 50, m_anchor02.y + 25, 50, 25 },
         Rectangle{ m_anchor02.x + 125, m_anchor02.y + 75, 25, 25 },
         Rectangle{ m_anchor02.x + 50, m_anchor02.y + 75, 90, 25 },

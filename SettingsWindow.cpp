@@ -2,7 +2,6 @@
 
 #include <algorithm>
 
-#define RAYGUI_IMPLEMENTATION
 #include "raygui.h"
 #include "WinWrapper.h"
 
